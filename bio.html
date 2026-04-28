@@ -9,11 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+<div id="page-curtain"></div>
 
   <!-- NAV -->
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <nav class="site-nav site-nav--dark" role="navigation" aria-label="Main navigation">
     <div class="site-nav__inner">
       <a href="index.html" class="site-nav__brand">Malati Rao</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -23,6 +25,8 @@
         <li><a href="bio.html" class="active">Bio</a></li>
         <li><a href="films.html">Films</a></li>
         <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -39,247 +43,199 @@
   <main>
     <div class="bio-wrap">
 
-      <!-- BIO + PHOTO -->
-      <div class="bio-lead">
-        <div class="bio-text">
-          <p>
-            Malati Rao is an award-winning documentary filmmaker and educator based in Pune, India.
-            Over two decades she has made films that document lives at the margins — children growing
-            up inside prisons, Tibetan Buddhist nuns seeking higher education, the artisans keeping
-            India's craft traditions alive, and individuals navigating questions of identity, rights,
-            and belonging.
+      <!-- HERO INTRO: Pull-quote + Photo -->
+      <div class="bio-hero">
+        <div class="bio-hero__text">
+          <p class="bio-pullquote">
+            "Films that document lives at the margins — bearing witness through a lens of empathy, rigour, and social conscience."
           </p>
-          <p>
-            Her films have been broadcast on national and international television and screened at
-            festivals across South Korea, Japan, Italy, Spain, the United Kingdom, the United States,
-            and India. She won Best Woman Director at the Bangkok International Documentary Awards 2020
-            for <em>The Geshema is Born</em>, a 56-minute film about Tibetan Buddhist nuns and their
-            pursuit of the Geshema degree — the highest academic distinction in Tibetan Buddhism.
-          </p>
-          <p>
-            Malati's work has been developed at leading international documentary labs including
-            Sheffield DocFest, DocEdge Kolkata, EsoDoc (European Social Documentary), and Tokyo Docs.
-            Her films have been acquired by KVRO Dutch Public Broadcasting (Netherlands), Cineplex
-            (Taiwan), and Asian Documentaries (Japan).
-          </p>
-          <p>
-            She is currently directing two feature-length documentaries: <em>Funeral in my Brain</em>,
-            a series on mental health produced by Drishyam Films, India; and <em>Hopes and Fears</em>,
-            about the plea for marriage equality in India, produced by Roo Films.
-          </p>
-          <p>
-            Malati holds an MFA in Film from Temple University, Philadelphia, an MA in Mass
-            Communication from Jamia Millia Islamia, Delhi, and a BA in English Literature from
-            St Stephen's College, Delhi University. She is currently Professor of Practice in Film
-            and Television Management at the School of Communication, FLAME University, Pune.
-          </p>
+          <p class="bio-tagline">Award-winning documentary filmmaker &amp; educator. Based in Pune, India.</p>
+          <div class="bio-stats">
+            <div class="bio-stat">
+              <span class="bio-stat__num">20+</span>
+              <span class="bio-stat__label">Years of Practice</span>
+            </div>
+            <div class="bio-stat">
+              <span class="bio-stat__num">9</span>
+              <span class="bio-stat__label">Films Directed</span>
+            </div>
+            <div class="bio-stat">
+              <span class="bio-stat__num">15+</span>
+              <span class="bio-stat__label">International Festivals</span>
+            </div>
+          </div>
         </div>
-
         <div class="bio-photo" aria-label="Portrait photograph of Malati Rao">
-          <!-- Replace src with actual photo path when available -->
           <div class="bio-photo__placeholder">
             Photo<br>Coming Soon
           </div>
         </div>
       </div>
 
+      <!-- ABOUT IN SCANNABLE BLOCKS -->
+      <section class="bio-section">
+        <p class="bio-section__label"><span>Practice</span></p>
+        <div class="bio-timeline">
+
+          <div class="bio-timeline__entry">
+            <span class="bio-timeline__tag">Film Work</span>
+            <p class="bio-timeline__body">
+              Over two decades she has made films that document lives at the margins — children growing up inside prisons, Tibetan Buddhist nuns seeking higher education, the artisans keeping India's craft traditions alive, and individuals navigating questions of identity, rights, and belonging.
+            </p>
+          </div>
+
+          <div class="bio-timeline__entry">
+            <span class="bio-timeline__tag">Recognition</span>
+            <p class="bio-timeline__body">
+              Won <strong>Best Woman Director</strong> at the Bangkok International Documentary Awards 2020 for <em>The Geshema is Born</em>. Her films have been broadcast nationally and internationally, and screened at festivals across South Korea, Japan, Italy, Spain, UK, USA, and India.
+            </p>
+          </div>
+
+          <div class="bio-timeline__entry">
+            <span class="bio-timeline__tag">Development</span>
+            <p class="bio-timeline__body">
+              Work developed at leading labs including Sheffield DocFest, DocEdge Kolkata, EsoDoc (European Social Documentary), and Tokyo Docs. Films acquired by KVRO Dutch Public Broadcasting (Netherlands), Cineplex (Taiwan), and Asian Documentaries (Japan).
+            </p>
+          </div>
+
+          <div class="bio-timeline__entry">
+            <span class="bio-timeline__tag">Current Projects</span>
+            <p class="bio-timeline__body">
+              Currently directing <em>Funeral in my Brain</em>, a feature series on mental health produced by Drishyam Films; and <em>Hopes and Fears</em>, about the plea for marriage equality in India, produced by Roo Films.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       <!-- EDUCATION -->
-      <section aria-labelledby="education-heading">
-        <p class="section-label" id="education-heading">Education</p>
-        <div class="cv-block">
-          <div class="cv-entry">
-            <p class="cv-date">2002 – 2006</p>
-            <div>
-              <p class="cv-role">MFA in Film</p>
-              <p class="cv-org">Temple University, Philadelphia, USA</p>
-              <p class="cv-note">University Fellow</p>
+      <section class="bio-section" aria-labelledby="education-heading">
+        <p class="bio-section__label" id="education-heading"><span>Education</span></p>
+        <div class="cv-timeline">
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2002 – 2006</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">MFA in Film</h3>
+              <p class="cv-timeline-org">Temple University, Philadelphia, USA</p>
+              <p class="cv-timeline-org" style="color: var(--accent); font-size: 0.75rem;">University Fellow</p>
             </div>
           </div>
-          <div class="cv-entry">
-            <p class="cv-date">1997 – 1999</p>
-            <div>
-              <p class="cv-role">MA in Mass Communication</p>
-              <p class="cv-org">Jamia Millia Islamia, Delhi, India</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">1997 – 1999</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">MA in Mass Communication</h3>
+              <p class="cv-timeline-org">Jamia Millia Islamia, Delhi, India</p>
             </div>
           </div>
-          <div class="cv-entry">
-            <p class="cv-date">1994 – 1997</p>
-            <div>
-              <p class="cv-role">BA in English Literature</p>
-              <p class="cv-org">St Stephen's College, Delhi University, Delhi, India</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">1994 – 1997</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">BA in English Literature</h3>
+              <p class="cv-timeline-org">St Stephen's College, Delhi University</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FELLOWSHIPS -->
-      <section aria-labelledby="fellowships-heading">
-        <p class="section-label" id="fellowships-heading">Fellowships &amp; Awards</p>
-        <div class="cv-block">
-          <div class="cv-entry">
-            <p class="cv-date">2006</p>
-            <div>
-              <p class="cv-role">Margaret McNamara Award</p>
-              <p class="cv-org">World Bank Family Network</p>
+      <!-- FELLOWSHIPS & AWARDS -->
+      <section class="bio-section" aria-labelledby="fellowships-heading">
+        <p class="bio-section__label" id="fellowships-heading"><span>Fellowships &amp; Awards</span></p>
+        <div class="cv-timeline">
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2020</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Best Woman Director</h3>
+              <p class="cv-timeline-org">Bangkok International Documentary Awards</p>
             </div>
           </div>
-          <div class="cv-entry">
-            <p class="cv-date">2005</p>
-            <div>
-              <p class="cv-role">Tarakhnath Das Foundation</p>
-              <p class="cv-org">South Asia Studies, Columbia University</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2006</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Margaret McNamara Award</h3>
+              <p class="cv-timeline-org">World Bank Family Network</p>
             </div>
           </div>
-          <div class="cv-entry">
-            <p class="cv-date">2002 – 2006</p>
-            <div>
-              <p class="cv-role">University Graduate Fellowship</p>
-              <p class="cv-org">Temple University, Philadelphia</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2005</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Tarakhnath Das Foundation</h3>
+              <p class="cv-timeline-org">South Asia Studies, Columbia University</p>
+            </div>
+          </div>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2002 – 2006</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">University Graduate Fellowship</h3>
+              <p class="cv-timeline-org">Temple University, Philadelphia</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- INTERNATIONAL LABS -->
-      <section aria-labelledby="labs-heading">
-        <p class="section-label" id="labs-heading">International Documentary Labs</p>
-        <div class="cv-block">
-          <div class="cv-entry">
-            <p class="cv-date">2017</p>
-            <div>
-              <p class="cv-role">Sheffield DocFest</p>
-              <p class="cv-org">Sheffield, UK</p>
+      <section class="bio-section" aria-labelledby="labs-heading">
+        <p class="bio-section__label" id="labs-heading"><span>International Documentary Labs</span></p>
+        <div class="bio-labs-grid">
+          <div class="bio-lab-card">
+            <div class="bio-lab-card__inner-border">
+              <span class="line-t"></span><span class="line-r"></span>
+              <span class="line-b"></span><span class="line-l"></span>
             </div>
+            <p class="bio-lab-card__year">2021</p>
+            <h4 class="bio-lab-card__name">Tokyo Docs</h4>
+            <p class="bio-lab-card__place">Tokyo, Japan</p>
           </div>
-          <div class="cv-entry">
-            <p class="cv-date">2015, 2017, 2020</p>
-            <div>
-              <p class="cv-role">DocEdge Kolkata</p>
-              <p class="cv-org">Kolkata, India</p>
+          <div class="bio-lab-card">
+            <div class="bio-lab-card__inner-border">
+              <span class="line-t"></span><span class="line-r"></span>
+              <span class="line-b"></span><span class="line-l"></span>
             </div>
+            <p class="bio-lab-card__year">2018</p>
+            <h4 class="bio-lab-card__name">EsoDoc</h4>
+            <p class="bio-lab-card__place">European Social Documentary</p>
           </div>
-          <div class="cv-entry">
-            <p class="cv-date">2018</p>
-            <div>
-              <p class="cv-role">EsoDoc — European Social Documentary</p>
-              <p class="cv-org">Europe</p>
+          <div class="bio-lab-card">
+            <div class="bio-lab-card__inner-border">
+              <span class="line-t"></span><span class="line-r"></span>
+              <span class="line-b"></span><span class="line-l"></span>
             </div>
+            <p class="bio-lab-card__year">2017</p>
+            <h4 class="bio-lab-card__name">Sheffield DocFest</h4>
+            <p class="bio-lab-card__place">Sheffield, UK</p>
           </div>
-          <div class="cv-entry">
-            <p class="cv-date">2021</p>
-            <div>
-              <p class="cv-role">Tokyo Docs</p>
-              <p class="cv-org">Tokyo, Japan</p>
+          <div class="bio-lab-card">
+            <div class="bio-lab-card__inner-border">
+              <span class="line-t"></span><span class="line-r"></span>
+              <span class="line-b"></span><span class="line-l"></span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- BROADCAST & SALES -->
-      <section aria-labelledby="broadcast-heading">
-        <p class="section-label" id="broadcast-heading">Broadcast Rights &amp; Sales</p>
-        <div class="cv-block">
-          <div class="cv-entry">
-            <p class="cv-date">&nbsp;</p>
-            <div>
-              <p class="cv-role">KVRO, Dutch Public Broadcasting</p>
-              <p class="cv-org">The Netherlands</p>
-            </div>
-          </div>
-          <div class="cv-entry">
-            <p class="cv-date">&nbsp;</p>
-            <div>
-              <p class="cv-role">Cineplex</p>
-              <p class="cv-org">Taiwan</p>
-            </div>
-          </div>
-          <div class="cv-entry">
-            <p class="cv-date">&nbsp;</p>
-            <div>
-              <p class="cv-role">Asian Documentaries</p>
-              <p class="cv-org">Japan</p>
-            </div>
+            <p class="bio-lab-card__year">2015 – 2020</p>
+            <h4 class="bio-lab-card__name">DocEdge Kolkata</h4>
+            <p class="bio-lab-card__place">Kolkata, India</p>
           </div>
         </div>
-      </section>
-
-      <!-- NOTABLE PRESS -->
-      <section aria-labelledby="press-heading">
-        <p class="section-label" id="press-heading">Notable Press</p>
-        <ul class="press-list">
-          <li>
-            <span class="press-num">01</span>
-            <a class="press-link" href="https://scroll.in/reel/949733/in-documentary-on-tibetan-buddhist-nuns-breaking-a-glass-ceiling-echoes-of-other-struggles" target="_blank" rel="noopener">
-              "In documentary on Tibetan Buddhist nuns, breaking a glass ceiling echoes of other struggles" — Scroll.in
-            </a>
-          </li>
-          <li>
-            <span class="press-num">02</span>
-            <a class="press-link" href="https://telanganatoday.com/the-geshema-is-born-vividly-documents-a-historic-turnaround" target="_blank" rel="noopener">
-              "The Geshema is Born vividly documents a historic turnaround" — Telangana Today
-            </a>
-          </li>
-          <li>
-            <span class="press-num">03</span>
-            <a class="press-link" href="https://scroll.in/reel/843632/all-that-matters-to-them-is-the-world-around-their-mother-documentary-on-children-born-in-prison" target="_blank" rel="noopener">
-              "All that matters to them is the world around their mother" — Scroll.in
-            </a>
-          </li>
-          <li>
-            <span class="press-num">04</span>
-            <a class="press-link" href="https://www.eastmojo.com/movies/2020/10/19/malati-rao-speaks-to-truth-with-movie-the-geshema-is-born/" target="_blank" rel="noopener">
-              "Malati Rao speaks to truth with The Geshema is Born" — East Mojo
-            </a>
-          </li>
-          <li>
-            <span class="press-num">05</span>
-            <a class="press-link" href="https://indianexpress.com/article/entertainment/entertainment-others/malati-raos-documentary-born-behind-bars-captures-the-lives-of-children-born-in-jail-4869408/" target="_blank" rel="noopener">
-              "Malati Rao's documentary Born Behind Bars captures the lives of children born in jail" — Indian Express
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <!-- INTERVIEWS -->
-      <section aria-labelledby="interviews-heading" style="margin-bottom: 0;">
-        <p class="section-label" id="interviews-heading">Interviews</p>
-        <ul class="press-list">
-          <li>
-            <span class="press-num">01</span>
-            <a class="press-link" href="https://www.youtube.com/watch?v=rz4MOjfh7o4" target="_blank" rel="noopener">
-              Interview — YouTube
-            </a>
-          </li>
-          <li>
-            <span class="press-num">02</span>
-            <a class="press-link" href="https://www.youtube.com/watch?v=fwAnFoLD8yc" target="_blank" rel="noopener">
-              Interview — YouTube
-            </a>
-          </li>
-          <li>
-            <span class="press-num">03</span>
-            <a class="press-link" href="https://www.mmeg.org/women-building-a-bettter-world-1/2021/3/6/malati-rao" target="_blank" rel="noopener">
-              "Women Building a Better World" — MMEG
-            </a>
-          </li>
-        </ul>
       </section>
 
     </div><!-- /bio-wrap -->
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--dark">
     <div class="site-footer__inner">
       <p class="site-footer__copy">© 2025 Malati Rao</p>
       <ul class="site-footer__links" role="list">
         <li><a href="films.html">Films</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

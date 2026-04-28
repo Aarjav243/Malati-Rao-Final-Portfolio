@@ -4,16 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Malati Rao — Filmmaker & Educator</title>
-  <meta name="description" content="Malati Rao is an award-winning documentary filmmaker and Professor of Practice at FLAME University, Pune. Her films document lives at the margins — from Tibetan monasteries to Indian prisons." />
+  <meta name="description" content="Malati Rao is an award-winning documentary filmmaker and Professor of Practice at FLAME University, Pune." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+<div id="page-curtain"></div>
 
-  <!-- NAV -->
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <!-- NAV (dark variant) -->
+  <nav class="site-nav site-nav--dark" role="navigation" aria-label="Main navigation">
     <div class="site-nav__inner">
       <a href="index.html" class="site-nav__brand">Malati Rao</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -23,52 +25,168 @@
         <li><a href="bio.html">Bio</a></li>
         <li><a href="films.html">Films</a></li>
         <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
   <main>
-    <section class="home-hero" aria-label="Introduction">
-      <div class="home-hero__content">
 
-        <p class="home-hero__eyebrow">Documentary Filmmaker &amp; Educator</p>
+    <!-- BOLD SPLIT HERO -->
+    <section class="home-hero-new" aria-label="Introduction">
 
-        <h1 class="home-hero__name">
-          Malati<br>Rao
+      <!-- LEFT: Text -->
+      <div class="home-hero-new__left">
+        <p class="home-hero-new__eyebrow">Documentary Filmmaker &amp; Educator</p>
+        <h1 class="home-hero-new__name">
+          <span class="name-top">Malati</span><br>
+          <span class="name-bottom">Rao</span>
         </h1>
-
-        <p class="home-hero__role">
-          Professor of Practice, FLAME University, Pune<br>
-          MFA, Temple University, Philadelphia
+        <p class="home-hero-new__role">
+          Professor of Practice, FLAME University<br>
+          MFA Film, Temple University, Philadelphia<br>
+          Pune, India
         </p>
+        <a href="films.html" class="home-hero-new__cta">View Films</a>
+      </div>
 
-        <p class="home-hero__statement">
-          Two decades of documentary filmmaking — from Tibetan monasteries
-          to Indian prisons, from vanishing crafts to questions of identity,
-          rights, and belonging. Award-winning films broadcast nationally
-          and internationally.
-        </p>
+      <!-- RIGHT: Film Stills -->
+      <div class="home-hero-new__right" aria-hidden="true">
 
-        <a href="films.html" class="home-hero__cta">View Films</a>
+        <!-- Still 1: The Geshema is Born (YouTube thumbnail) -->
+        <a href="films/the-geshema-is-born.html" class="film-still-card">
+          <img
+            class="film-still-card__img"
+            src="https://img.youtube.com/vi/_tpyrA7TV94/maxresdefault.jpg"
+            alt="The Geshema is Born"
+          />
+          <div class="film-still-card__label">
+            <span class="film-still-card__title">The Geshema is Born</span>
+            <span class="film-still-card__year">2016 – 19</span>
+          </div>
+        </a>
+
+        <!-- Still 2: Born Behind Bars -->
+        <a href="films/born-behind-bars.html" class="film-still-card">
+          <img
+            class="film-still-card__img"
+            src="https://vumbnail.com/194629819.jpg"
+            alt="Born Behind Bars"
+          />
+          <div class="film-still-card__label">
+            <span class="film-still-card__title">Born Behind Bars</span>
+            <span class="film-still-card__year">2014 – 16</span>
+          </div>
+        </a>
+
+        <!-- Still 3: Handmade in India -->
+        <a href="films/handmade-in-india.html" class="film-still-card">
+          <img
+            class="film-still-card__img"
+            src="https://vumbnail.com/137212757.jpg"
+            alt="Handmade in India"
+          />
+          <div class="film-still-card__label">
+            <span class="film-still-card__title">Handmade in India</span>
+            <span class="film-still-card__year">2013 – 14</span>
+          </div>
+        </a>
 
       </div>
     </section>
+
+    <!-- STATEMENT SECTION -->
+    <section class="home-statement">
+      <div class="home-statement__inner">
+        <p class="home-statement__label">About</p>
+        <p class="home-statement__text">
+          Two decades of documentary filmmaking — from <em>Tibetan monasteries</em>
+          to <em>Indian prisons</em>, from vanishing craft traditions to questions of
+          identity, rights, and belonging. Award-winning films broadcast nationally
+          and internationally. Currently directing two feature-length documentaries
+          on mental health and marriage equality in India.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURED FILMS -->
+    <section class="featured-section" aria-labelledby="featured-label">
+      <div class="featured-section__inner">
+        <div class="featured-section__header">
+          <p class="featured-section__label" id="featured-label">Selected Works</p>
+          <a href="films.html" class="featured-section__link">All Films</a>
+        </div>
+
+        <div class="featured-grid">
+
+          <!-- Card 1: Geshema -->
+          <a href="films/the-geshema-is-born.html" class="featured-card">
+            <img
+              class="featured-card__img"
+              src="https://img.youtube.com/vi/_tpyrA7TV94/maxresdefault.jpg"
+              alt="The Geshema is Born"
+            />
+            <div class="featured-card__overlay">
+              <p class="featured-card__num">04</p>
+              <p class="featured-card__title">The Geshema is Born</p>
+              <p class="featured-card__meta">56 min · 2016–19 · Best Director, Bangkok</p>
+            </div>
+          </a>
+
+          <!-- Card 2: Born Behind Bars -->
+          <a href="films/born-behind-bars.html" class="featured-card">
+            <img
+              class="featured-card__img"
+              src="https://vumbnail.com/194629819.jpg"
+              alt="Born Behind Bars"
+            />
+            <div class="featured-card__overlay">
+              <p class="featured-card__num">05</p>
+              <p class="featured-card__title">Born Behind Bars</p>
+              <p class="featured-card__meta">52 min · 2014–16 · Films Division</p>
+            </div>
+          </a>
+
+          <!-- Card 3: Handmade in India -->
+          <a href="films/handmade-in-india.html" class="featured-card">
+            <img
+              class="featured-card__img"
+              src="https://vumbnail.com/137212757.jpg"
+              alt="Handmade in India"
+            />
+            <div class="featured-card__overlay">
+              <p class="featured-card__num">06</p>
+              <p class="featured-card__title">Handmade in India</p>
+              <p class="featured-card__meta">26 min · 2013–14 · Best Film, MWIFF</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+  <!-- DARK FOOTER -->
+  <footer class="site-footer site-footer--dark">
     <div class="site-footer__inner">
       <p class="site-footer__copy">© 2025 Malati Rao</p>
       <ul class="site-footer__links" role="list">
         <li><a href="bio.html">Bio</a></li>
         <li><a href="films.html">Films</a></li>
+        <li><a href="press.html">Press</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

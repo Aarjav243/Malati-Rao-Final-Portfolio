@@ -9,11 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+<div id="page-curtain"></div>
 
   <!-- NAV -->
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <nav class="site-nav site-nav--dark" role="navigation" aria-label="Main navigation">
     <div class="site-nav__inner">
       <a href="index.html" class="site-nav__brand">Malati Rao</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -23,6 +25,8 @@
         <li><a href="bio.html">Bio</a></li>
         <li><a href="films.html" class="active">Films</a></li>
         <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -47,18 +51,21 @@
           <span class="film-row__num">01</span>
           <span class="film-row__title">Winds of Change</span>
           <span class="film-row__meta">2024 – 25</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
         <a href="films/hopes-and-fears.html" class="film-row">
           <span class="film-row__num">02</span>
           <span class="film-row__title">Hopes and Fears</span>
           <span class="film-row__meta">2023 –</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
         <a href="films/funeral-in-my-brain.html" class="film-row">
           <span class="film-row__num">03</span>
           <span class="film-row__title">Funeral in my Brain</span>
           <span class="film-row__meta">2021 –</span>
+          <div class="film-row__reveal-line"></div>
         </a>
       </section>
 
@@ -70,36 +77,42 @@
           <span class="film-row__num">04</span>
           <span class="film-row__title">The Geshema is Born</span>
           <span class="film-row__meta">2016 – 19</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
         <a href="films/born-behind-bars.html" class="film-row">
           <span class="film-row__num">05</span>
           <span class="film-row__title">Born Behind Bars</span>
           <span class="film-row__meta">2014 – 16</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
         <a href="films/handmade-in-india.html" class="film-row">
           <span class="film-row__num">06</span>
           <span class="film-row__title">Handmade in India</span>
           <span class="film-row__meta">2013 – 14</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
         <a href="films/free-and-compulsory.html" class="film-row">
           <span class="film-row__num">07</span>
           <span class="film-row__title">Free and Compulsory</span>
           <span class="film-row__meta">2011 – 12</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
         <a href="films/setu-the-bridge.html" class="film-row">
           <span class="film-row__num">08</span>
           <span class="film-row__title">Setu — The Bridge</span>
           <span class="film-row__meta">&nbsp;</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
         <a href="films/the-witch-of-agnesi.html" class="film-row">
           <span class="film-row__num">09</span>
           <span class="film-row__title">The Witch of Agnesi</span>
           <span class="film-row__meta">2004 – 06</span>
+          <div class="film-row__reveal-line"></div>
         </a>
       </section>
 
@@ -111,18 +124,21 @@
           <span class="film-row__num">10</span>
           <span class="film-row__title">Tell Me a Story</span>
           <span class="film-row__meta">Ongoing</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
-        <a href="https://vimeo.com/348846807" target="_blank" rel="noopener" class="film-row film-row--external">
+        <a href="films/bikhre-rishte.html" class="film-row">
           <span class="film-row__num">11</span>
           <span class="film-row__title">Bikhre Rishte / Invisible Lives</span>
           <span class="film-row__meta">2019</span>
+          <div class="film-row__reveal-line"></div>
         </a>
 
-        <a href="https://vimeo.com/924595620/9aaa56221c" target="_blank" rel="noopener" class="film-row film-row--external">
+        <a href="films/vapasi.html" class="film-row">
           <span class="film-row__num">12</span>
           <span class="film-row__title">Vapasi</span>
           <span class="film-row__meta">2024</span>
+          <div class="film-row__reveal-line"></div>
         </a>
       </section>
 
@@ -134,18 +150,21 @@
           <span class="film-row__num">13</span>
           <span class="film-row__title" style="font-style:italic;">Hospital</span>
           <span class="film-row__meta">2001 · Associate Producer</span>
+          <div class="film-row__reveal-line"></div>
         </div>
 
         <div class="film-row" style="cursor:default;">
           <span class="film-row__num">14</span>
           <span class="film-row__title" style="font-style:italic;">Patang</span>
           <span class="film-row__meta">2008 · Assistant Director</span>
+          <div class="film-row__reveal-line"></div>
         </div>
 
         <div class="film-row" style="cursor:default;">
           <span class="film-row__num">15</span>
           <span class="film-row__title" style="font-style:italic;">Sarah and Dee</span>
           <span class="film-row__meta">2007 · Assistant Director</span>
+          <div class="film-row__reveal-line"></div>
         </div>
       </section>
 
@@ -153,7 +172,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--dark">
     <div class="site-footer__inner">
       <p class="site-footer__copy">© 2025 Malati Rao</p>
       <ul class="site-footer__links" role="list">
@@ -164,6 +183,11 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

@@ -9,11 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+<div id="page-curtain"></div>
 
   <!-- NAV -->
-  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <nav class="site-nav site-nav--dark" role="navigation" aria-label="Main navigation">
     <div class="site-nav__inner">
       <a href="index.html" class="site-nav__brand">Malati Rao</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -23,6 +25,8 @@
         <li><a href="bio.html">Bio</a></li>
         <li><a href="films.html">Films</a></li>
         <li><a href="teaching.html" class="active">Teaching</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -33,6 +37,9 @@
     <div class="page-header__inner">
       <p class="page-header__eyebrow">Academia</p>
       <h1 class="page-header__title">Teaching</h1>
+      <p class="page-intro">
+        Educating the next generation of filmmakers through a lens of socially engaged documentary practice and visual storytelling.
+      </p>
     </div>
   </header>
 
@@ -40,232 +47,131 @@
     <div class="teaching-wrap">
 
       <!-- TEACHING POSITIONS -->
-      <section class="teaching-section" aria-labelledby="positions-heading">
-        <p class="section-label" id="positions-heading">Teaching Positions</p>
-
-        <div class="cv-entry">
-          <p class="cv-date">August 2024 – Ongoing</p>
-          <div>
-            <p class="cv-role">Professor of Practice</p>
-            <p class="cv-org">Film and TV Management, School of Communication</p>
-            <p class="cv-org">FLAME University, Pune, India</p>
+      <section class="teaching-section">
+        <p class="teaching-section-label"><span>Teaching Positions</span></p>
+        
+        <div class="cv-timeline">
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">August 2024 – Ongoing</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Professor of Practice</h3>
+              <p class="cv-timeline-org">Film and TV Management, School of Communication</p>
+              <p class="cv-timeline-org">FLAME University, Pune, India</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cv-entry">
-          <p class="cv-date">2019 – 2020</p>
-          <div>
-            <p class="cv-role">Visiting Faculty</p>
-            <p class="cv-org">Video Production</p>
-            <p class="cv-org">Xavier's Institute of Communication, St Xavier's College, Mumbai</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2016 – 2023</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Associate Professor</h3>
+              <p class="cv-timeline-org">FLAME University, Pune</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cv-entry">
-          <p class="cv-date">2015 – 2019</p>
-          <div>
-            <p class="cv-role">Visiting Faculty</p>
-            <p class="cv-org">Documentary Production</p>
-            <p class="cv-org">Symbiosis Institute of Media and Communication, Pune</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2009 – 2011</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Associate Professor</h3>
+              <p class="cv-timeline-org">Audio Visual Production, SIMC Pune</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cv-entry">
-          <p class="cv-date">June 2009 – August 2011</p>
-          <div>
-            <p class="cv-role">Associate Professor</p>
-            <p class="cv-org">Audio Visual Production, Screenwriting &amp; Documentary Production</p>
-            <p class="cv-org">Symbiosis Institute of Media and Communication, Pune</p>
-          </div>
-        </div>
-
-        <div class="cv-entry">
-          <p class="cv-date">May 2004 – January 2006</p>
-          <div>
-            <p class="cv-role">Adjunct Faculty</p>
-            <p class="cv-org">Screenwriting and Film &amp; Video Analysis</p>
-            <p class="cv-org">Temple University, Philadelphia, USA</p>
-          </div>
-        </div>
-
-        <div class="cv-entry">
-          <p class="cv-date">August 2002 – April 2004</p>
-          <div>
-            <p class="cv-role">Teaching Assistant</p>
-            <p class="cv-org">Screenwriting and Documentary Filmmaking</p>
-            <p class="cv-org">Temple University, Philadelphia, USA</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2002 – 2006</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Adjunct Faculty & Teaching Assistant</h3>
+              <p class="cv-timeline-org">Temple University, Philadelphia, USA</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- COURSES AT FLAME -->
-      <section class="teaching-section" aria-labelledby="courses-heading">
-        <p class="section-label" id="courses-heading">Courses at FLAME University</p>
-        <table class="courses-table">
-          <thead>
-            <tr>
-              <th>Course</th>
-              <th>Code</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Visual Storytelling</td>
-              <td>FLTV 106</td>
-              <td>2024, 2025</td>
-            </tr>
-            <tr>
-              <td>Documentary Filmmaking</td>
-              <td>FLTV 460</td>
-              <td>2024</td>
-            </tr>
-            <tr>
-              <td>Art and Technique of Filmmaking</td>
-              <td>FLTV 211</td>
-              <td>2025</td>
-            </tr>
-            <tr>
-              <td>Introduction to Film</td>
-              <td>FLTV 504</td>
-              <td>2025</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <!-- RESEARCH -->
-      <section class="teaching-section" aria-labelledby="research-heading">
-        <p class="section-label" id="research-heading">Research</p>
-
-        <div class="cv-entry">
-          <p class="cv-date">September 2022</p>
-          <div>
-            <p class="cv-role">"Narratives of Experience — Navigating the Mental Health System in India through the documentary form"</p>
-            <p class="cv-org">Presented at Interdisciplinary Dialogues around Psychiatry</p>
-            <p class="cv-org">Indian Association of Social Psychiatry Conference, New Delhi</p>
+      <!-- COURSES -->
+      <section class="teaching-section">
+        <p class="teaching-section-label"><span>Courses Taught</span></p>
+        <div class="courses-premium">
+          <div class="course-card">
+            <h4 class="course-card__title">Visual Storytelling</h4>
+            <p class="course-card__year">2024, 2025</p>
           </div>
-        </div>
-
-        <div class="cv-entry">
-          <p class="cv-date">2018</p>
-          <div>
-            <p class="cv-role">Research Person, HERO</p>
-            <p class="cv-org">Daily Maverick, South Africa</p>
-            <p class="cv-note">For a documentary project</p>
+          <div class="course-card">
+            <h4 class="course-card__title">Documentary Filmmaking</h4>
+            <p class="course-card__year">2024</p>
+          </div>
+          <div class="course-card">
+            <h4 class="course-card__title">Art and Technique of Filmmaking</h4>
+            <p class="course-card__year">2025</p>
+          </div>
+          <div class="course-card">
+            <h4 class="course-card__title">Introduction to Film</h4>
+            <p class="course-card__year">2025</p>
           </div>
         </div>
       </section>
 
-      <!-- JURY -->
-      <section class="teaching-section" aria-labelledby="jury-heading">
-        <p class="section-label" id="jury-heading">Jury</p>
-
-        <div class="cv-entry">
-          <p class="cv-date">2024</p>
-          <div>
-            <p class="cv-role">Short Documentary Film Jury</p>
-            <p class="cv-org">International Documentary Association (IDA)</p>
+      <!-- JURY & SERVICE -->
+      <section class="teaching-section">
+        <p class="teaching-section-label"><span>Jury & Service</span></p>
+        
+        <div class="cv-timeline">
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2024</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Short Documentary Film Jury</h3>
+              <p class="cv-timeline-org">International Documentary Association (IDA)</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cv-entry">
-          <p class="cv-date">2024</p>
-          <div>
-            <p class="cv-role">National Documentary Jury</p>
-            <p class="cv-org">Kolkata International Film Festival</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2024</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">National Documentary Jury</h3>
+              <p class="cv-timeline-org">Kolkata International Film Festival</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cv-entry">
-          <p class="cv-date">2025, 2026</p>
-          <div>
-            <p class="cv-role">External Jury, Masters Thesis Project</p>
-            <p class="cv-org">MA in Media and Cultural Studies</p>
-            <p class="cv-org">Tata Institute of Social Sciences</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2025 – 2026</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">External Jury, Masters Thesis</h3>
+              <p class="cv-timeline-org">MA in Media and Cultural Studies, TISS</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cv-entry">
-          <p class="cv-date">2025</p>
-          <div>
-            <p class="cv-role">Jury Member, ELLIPSIS 2025</p>
-            <p class="cv-org">FLAME University</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICE AT FLAME -->
-      <section class="teaching-section" aria-labelledby="service-heading">
-        <p class="section-label" id="service-heading">Service at FLAME University</p>
-
-        <div class="cv-entry">
-          <p class="cv-date">2024 – 2026</p>
-          <div>
-            <p class="cv-role">Member, IRB Committee</p>
-            <p class="cv-org">FLAME University</p>
-          </div>
-        </div>
-
-        <div class="cv-entry">
-          <p class="cv-date">2024 – 2026</p>
-          <div>
-            <p class="cv-role">Member, Student Advancement and Support Committee (SASC)</p>
-            <p class="cv-org">FLAME University</p>
-          </div>
-        </div>
-
-        <div class="cv-entry">
-          <p class="cv-date">2025</p>
-          <div>
-            <p class="cv-role">Faculty Mentor, MBA CM First Year</p>
-            <p class="cv-org">FLAME University</p>
-          </div>
-        </div>
-
-        <div class="cv-entry">
-          <p class="cv-date">2025</p>
-          <div>
-            <p class="cv-role">FLAME Faculty Representative, Orientation Week</p>
-            <p class="cv-org">FLAME University</p>
-          </div>
-        </div>
-
-        <div class="cv-entry">
-          <p class="cv-date">2025</p>
-          <div>
-            <p class="cv-role">Undergraduate Student Outreach — Masterclasses in Filmmaking</p>
-            <p class="cv-org">Mainadevi Bajaj International School, Malad West</p>
-            <p class="cv-org">The Somaiya School, Ghatkopar</p>
-          </div>
-        </div>
-
-        <div class="cv-entry">
-          <p class="cv-date">2025</p>
-          <div>
-            <p class="cv-role">Industry Engagement</p>
-            <p class="cv-note">Invited producer Rucha Pathak to meet the Art and Technique of Filmmaking class</p>
+          <div class="cv-timeline-entry">
+            <span class="cv-timeline-date">2024 – 2026</span>
+            <div class="cv-timeline-content">
+              <h3 class="cv-timeline-role">Committee Member (IRB, SASC)</h3>
+              <p class="cv-timeline-org">FLAME University</p>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- NOTABLE FESTIVALS -->
-      <section class="teaching-section" aria-labelledby="festivals-heading" style="border-bottom:none;">
-        <p class="section-label" id="festivals-heading">Notable Festivals Attended</p>
-        <p style="font-family: var(--font-serif); font-size: 1rem; color: var(--text-2); line-height: 2; font-weight: 300;">
-          DMZ Docs (South Korea) &nbsp;·&nbsp; Film Southasia &nbsp;·&nbsp; River to River Florence &nbsp;·&nbsp;
-          MIFF Mumbai &nbsp;·&nbsp; Commonwealth Film Festival &nbsp;·&nbsp; Signs Film Festival &nbsp;·&nbsp;
-          Imagine Asia Madrid &nbsp;·&nbsp; Indie Meme &nbsp;·&nbsp; Kashish Film Festival &nbsp;·&nbsp;
-          Woodpecker Film Festival &nbsp;·&nbsp; Open Frame Film Festival &nbsp;·&nbsp;
-          Justice for All Film Festival (Chicago) &nbsp;·&nbsp; and many others
-        </p>
+      <section class="teaching-section" style="border-bottom:none;">
+        <p class="teaching-section-label"><span>Notable Festivals Attended</span></p>
+        <div class="festivals-cloud">
+          <span class="festival-tag">DMZ Docs (South Korea)</span>
+          <span class="festival-tag">Film Southasia</span>
+          <span class="festival-tag">River to River Florence</span>
+          <span class="festival-tag">MIFF Mumbai</span>
+          <span class="festival-tag">Commonwealth Film Festival</span>
+          <span class="festival-tag">Signs Film Festival</span>
+          <span class="festival-tag">Imagine Asia Madrid</span>
+          <span class="festival-tag">Indie Meme</span>
+          <span class="festival-tag">Kashish Film Festival</span>
+          <span class="festival-tag">Woodpecker Film Festival</span>
+          <span class="festival-tag">Open Frame Film Festival</span>
+          <span class="festival-tag">Justice for All Film Festival (Chicago)</span>
+        </div>
       </section>
 
     </div><!-- /teaching-wrap -->
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
+  <footer class="site-footer site-footer--dark">
     <div class="site-footer__inner">
       <p class="site-footer__copy">© 2025 Malati Rao</p>
       <ul class="site-footer__links" role="list">
@@ -276,6 +182,11 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>
