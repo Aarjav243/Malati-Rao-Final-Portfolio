@@ -650,9 +650,11 @@ ul, ol { list-style: none; }
 
 .film-embed-wrap iframe {
   display: block;
-  width: 100%;
+  width: calc(100% - 5rem); /* Reduced width for black border */
+  margin-right: 5rem;
   aspect-ratio: 16 / 9;
   border: none;
+  background: #000;
 }
 
 .film-embed-placeholder {
@@ -1168,6 +1170,7 @@ ul, ol { list-style: none; }
 .home-hero-new__cta {
   display: inline-flex;
   align-items: center;
+  margin-top: 1.5rem;
   gap: 0.75rem;
   font-family: var(--font-sans);
   font-size: 0.68rem;
@@ -1193,11 +1196,14 @@ ul, ol { list-style: none; }
   cursor: pointer;
   display: block;
   text-decoration: none;
+  background: #000;
+  padding-right: 0; /* Remove padding here, use margin on img instead */
 }
 .film-still-card:last-child { border-bottom: none; }
 
 .film-still-card__img {
-  width: 100%;
+  width: calc(100% - 6.5rem); /* Visibly reduced width */
+  margin-right: 6.5rem;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.55) saturate(0.8);
@@ -1223,7 +1229,7 @@ ul, ol { list-style: none; }
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 6.5rem; /* Match img width reduction */
   padding: 1.5rem 1.25rem 1rem;
   background: linear-gradient(transparent, rgba(10,8,6,0.85));
   display: flex;
@@ -1351,9 +1357,12 @@ ul, ol { list-style: none; }
   background: var(--dark-2);
   display: block;
   text-decoration: none;
+  background: #000;
+  padding-right: 0; /* Remove padding here, use margin on img instead */
 }
 .featured-card__img {
-  width: 100%;
+  width: calc(100% - 4.5rem); /* Visibly reduced width */
+  margin-right: 4.5rem;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.5) saturate(0.7);
@@ -1366,7 +1375,8 @@ ul, ol { list-style: none; }
 }
 .featured-card__overlay {
   position: absolute;
-  inset: 0;
+  top: 0; bottom: 0; left: 0;
+  right: 4.5rem; /* Match img width reduction */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1989,3 +1999,31 @@ ul, ol { list-style: none; }
 
 .site-footer--dark .site-footer__links a { color: var(--dark-text-3); }
 .site-footer--dark .site-footer__links a:hover { color: var(--accent); }
+
+/* === FESTIVALS GRID === */
+.festivals-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.fest-tag {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--dark-text-2);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.fest-tag:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+

@@ -4,6 +4,13 @@
    Curtain CSS lives in style.css — both load before any content renders,
    so the curtain covers the screen from the very first browser paint.    */
 
+/* ── Disable BFCache: force fresh load on back/forward navigation ────────
+   Adding ANY unload listener tells the browser not to store this page in
+   the Back/Forward Cache. Without BFCache, back navigation always does a
+   real page load, so the curtain reveal animation runs correctly.         */
+window.addEventListener('unload', () => {});
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const curtain = document.getElementById('page-curtain');
@@ -71,10 +78,15 @@ document.addEventListener('DOMContentLoaded', () => {
     duration: 0.75,
     ease: 'expo.inOut',
     delay: 0.05,
-    onComplete: () => { curtain.style.pointerEvents = 'none'; },
+    onComplete: () => {
+      curtain.style.pointerEvents = 'none';
+    },
   });
 
-  /* Internal link clicks: drop curtain then navigate */
+  /* Internal link clicks: navigate directly.
+     No exit curtain animation — any element covering the screen at
+     navigation time gets frozen in BFCache, causing a black screen
+     on back navigation. Direct navigation is the reliable fix.       */
   document.querySelectorAll('a[href]').forEach(link => {
     const href = link.getAttribute('href');
     if (!href ||
@@ -86,16 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     link.addEventListener('click', e => {
       e.preventDefault();
-      curtain.style.pointerEvents = 'all';
-      gsap.fromTo(curtain,
-        { yPercent: 100 },
-        {
-          yPercent: 0,
-          duration: 0.45,
-          ease: 'expo.in',
-          onComplete: () => { window.location.href = href; },
-        }
-      );
+      window.location.href = href;
     });
   });
 
@@ -154,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: { 
         trigger: '.home-statement', 
         start: 'top 78%',
-        toggleActions: 'play reverse play reverse'
+        toggleActions: 'play none none none'
       },
       opacity: 0, y: 20, duration: 0.8, ease: 'power2.out',
     });
@@ -163,7 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: { 
         trigger: '.featured-grid', 
         start: 'top 80%',
-        toggleActions: 'play reverse play reverse'
+        toggleActions: 'play none none none'
       },
       opacity: 0, y: 30, duration: 0.65, ease: 'power2.out', stagger: 0.1,
     });
@@ -207,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
           trigger: row,
           start: 'top 90%',
-          toggleActions: 'play reverse play reverse'
+          toggleActions: 'play none none none'
         },
         delay: i * 0.08
       });
@@ -280,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: { 
           trigger: '.bio-pullquote', 
           start: 'top 85%',
-          toggleActions: 'play reverse play reverse'
+          toggleActions: 'play none none none'
         },
         opacity: 1, filter: 'blur(0px)', y: 0, 
         duration: 0.8, ease: 'power2.out', stagger: 0.05
@@ -291,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: { 
         trigger: '.bio-photo', 
         start: 'top 80%',
-        toggleActions: 'play reverse play reverse'
+        toggleActions: 'play none none none'
       },
       opacity: 1, filter: 'brightness(1) contrast(1) saturate(1) blur(0px)',
       duration: 2.5, ease: 'power2.inOut'
@@ -307,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: { 
           trigger: num, 
           start: 'top 90%',
-          toggleActions: 'play reverse play reverse'
+          toggleActions: 'play none none none'
         },
         innerText: targetValue,
         duration: 2,
@@ -327,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
           trigger: entry,
           start: 'top 85%',
-          toggleActions: 'play reverse play reverse'
+          toggleActions: 'play none none none'
         }
       });
 
@@ -345,11 +348,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const content = entry.querySelector('.cv-timeline-content');
       
       gsap.from(date, {
-        scrollTrigger: { trigger: entry, start: 'top 85%', toggleActions: 'play reverse play reverse' },
+        scrollTrigger: { trigger: entry, start: 'top 85%', toggleActions: 'play none none none' },
         opacity: 0, x: -40, duration: 0.8, ease: 'power2.out'
       });
       gsap.from(content, {
-        scrollTrigger: { trigger: entry, start: 'top 85%', toggleActions: 'play reverse play reverse' },
+        scrollTrigger: { trigger: entry, start: 'top 85%', toggleActions: 'play none none none' },
         opacity: 0, x: 40, duration: 0.8, ease: 'power2.out'
       });
     });
@@ -363,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
           trigger: card,
           start: 'top 85%',
-          toggleActions: 'play reverse play reverse'
+          toggleActions: 'play none none none'
         }
       });
 
@@ -426,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: { 
         trigger: '.press-wrap', 
         start: 'top 82%',
-        toggleActions: 'play reverse play reverse'
+        toggleActions: 'play none none none'
       },
       opacity: 0, y: 12, duration: 0.5, ease: 'power2.out', stagger: 0.08,
     });
@@ -438,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: { 
         trigger: '.interviews-wrap', 
         start: 'top 82%',
-        toggleActions: 'play reverse play reverse'
+        toggleActions: 'play none none none'
       },
       opacity: 0, scale: 0.98, y: 14, duration: 0.6, ease: 'power2.out', stagger: 0.1,
     });
@@ -450,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: { 
         trigger: '.contact-grid', 
         start: 'top 82%',
-        toggleActions: 'play reverse play reverse'
+        toggleActions: 'play none none none'
       },
       opacity: 0, y: 14, duration: 0.5, ease: 'power2.out', stagger: 0.08, delay: 0.15,
     });
