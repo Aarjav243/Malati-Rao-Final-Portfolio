@@ -382,46 +382,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Timeline Draw Animation (existing) removed
   }
 
-  /* Teaching */
-  if (document.querySelector('.teaching-wrap')) {
-
-    // Section labels
-    document.querySelectorAll('.teaching-section-label').forEach(label => {
-      gsap.from(label, {
-        scrollTrigger: { trigger: label, start: 'top 95%', once: true },
-        opacity: 0, x: -12, duration: 0.5, ease: 'power2.out',
-      });
-    });
-
-    // CV entries: date slides from left, role/org slides from right
-    document.querySelectorAll('.cv-timeline-entry').forEach(entry => {
-      const date = entry.querySelector('.cv-timeline-date');
-      const body = entry.querySelector('.cv-timeline-content');
-      if (!date || !body) return;
-      const st = { trigger: entry, start: 'top 95%', once: true };
-      gsap.from(date, { scrollTrigger: st, opacity: 0, x: -20, duration: 0.55, ease: 'power2.out' });
-      gsap.from(body, { scrollTrigger: st, opacity: 0, x:  20, duration: 0.55, ease: 'power2.out' });
-    });
-
-    // Course cards: scan in from the left one by one
-    const courseCards = document.querySelectorAll('.course-card');
-    if (courseCards.length) {
-      gsap.from(courseCards, {
-        scrollTrigger: { trigger: '.courses-premium', start: 'top 95%', once: true },
-        opacity: 0, x: -14, duration: 0.4, ease: 'power2.out', stagger: 0.07,
-      });
-    }
-
-    // Festival tags: appear one by one like film credits
-    const cloud = document.querySelector('.festivals-cloud');
-    if (cloud) {
-      const tags = cloud.querySelectorAll('.festival-tag');
-      gsap.from(tags, {
-        scrollTrigger: { trigger: cloud, start: 'top 95%', once: true },
-        opacity: 0, y: 6, duration: 0.35, ease: 'power2.out', stagger: 0.08,
-      });
-    }
-  }
 
   /* Press */
   if (document.querySelector('.press-wrap')) {
@@ -464,7 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* Safety Fallback: After 2.5s, force everything to visible if JS animations got stuck */
   setTimeout(() => {
-    gsap.set('.teaching-wrap, .teaching-wrap *', { opacity: 1, x: 0, y: 0, clipPath: 'none', overwrite: 'auto' });
+    gsap.set('.bio-wrap, .bio-wrap *', { opacity: 1, x: 0, y: 0, clipPath: 'none', overwrite: 'auto' });
   }, 2500);
 
 });
