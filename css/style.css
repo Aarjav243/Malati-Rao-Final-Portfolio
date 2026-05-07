@@ -224,7 +224,7 @@ ul, ol { list-style: none; }
 
   .site-nav__links a {
     display: block;
-    padding: 0.85rem 0;
+    padding: 1.1rem 0;
     width: 100%;
     font-size: 0.78rem;
     border-bottom: 1px solid var(--border);
@@ -1259,8 +1259,8 @@ ul, ol { list-style: none; }
     grid-template-columns: 1fr;
   }
   .home-hero-new__right {
-    grid-template-rows: repeat(3, 200px);
-    height: 600px;
+    grid-template-rows: repeat(4, 175px);
+    height: 700px;
   }
   .home-hero-new__left {
     border-right: none;
@@ -2025,5 +2025,77 @@ ul, ol { list-style: none; }
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-2px);
+}
+
+/* ================================================
+   MOBILE IMPROVEMENTS
+   ================================================ */
+
+/* Film still cards: remove desktop right-margin offset on mobile */
+@media (max-width: 640px) {
+  .film-still-card__img {
+    width: 100%;
+    margin-right: 0;
+  }
+  .film-still-card__label {
+    right: 0;
+  }
+}
+
+/* Featured cards: remove desktop right-margin offset on mobile */
+@media (max-width: 640px) {
+  .featured-card__img {
+    width: 100%;
+    margin-right: 0;
+  }
+  .featured-card__overlay {
+    right: 0;
+  }
+}
+
+/* Film embed: full-width video on mobile */
+@media (max-width: 640px) {
+  .film-embed-wrap iframe {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Film row: wrap meta below title on narrow screens */
+@media (max-width: 480px) {
+  .film-row {
+    grid-template-columns: 2.75rem 1fr;
+    align-items: start;
+    padding: 1.25rem 0;
+  }
+  .film-row__meta {
+    grid-column: 2;
+    text-align: left;
+    padding-bottom: 0.25rem;
+  }
+}
+
+/* cv-timeline-entry: stack on small phones */
+@media (max-width: 520px) {
+  .cv-timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding: 1.75rem 0;
+  }
+}
+
+/* Home hero name: reduce on very small screens */
+@media (max-width: 380px) {
+  .home-hero-new__name {
+    font-size: clamp(3rem, 12vw, 4rem);
+  }
+}
+
+/* Bio timeline: ensure stack breakpoint applies */
+@media (max-width: 520px) {
+  .bio-timeline__entry {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
 }
 
