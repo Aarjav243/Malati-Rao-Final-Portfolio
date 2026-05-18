@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://malati-rao-final-portfolio.vercel.app/sitemap.xml
